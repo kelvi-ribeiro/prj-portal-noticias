@@ -1,0 +1,19 @@
+{
+  "name": "prj-portal-noticias",
+  "version": "1.0.0",
+  "description": "Site de Notícias",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kelvi-ribeiro@bitbucket.org/kelvi-ribeiro/prj-portal-noticias.git"
+  },
+  "author": "Kelvi Martins Ribeiro",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/kelvi-ribeiro/prj-portal-noticias#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
