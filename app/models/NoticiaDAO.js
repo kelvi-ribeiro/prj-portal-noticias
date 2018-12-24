@@ -6,7 +6,7 @@
  }
 
  NoticiaDAO.prototype.getNoticia = function(callback){
-    this._connection.query('SELECT n.* FROM noticia as n where n.id_noticia = 2',callback);  
+    this._connection.query('SELECT n.* FROM noticia as n where n.id_noticia = 1',callback);  
  }
 
  NoticiaDAO.prototype.salvarNoticia = function(noticia,callback){
