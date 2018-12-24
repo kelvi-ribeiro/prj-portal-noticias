@@ -3,7 +3,11 @@ module.exports = function(app){
         res.render("admin/form_add_noticia");
     });
     app.post('/noticias/salvar',function(req,res){
-        var noticias = req.body
-        res.send(noticias);
+        var noticia = req.body;        
+        var connection = app.config.dbConnection();
+        var noticiaModel = app.app.models.noticiaModel;
+        noticiaModel.salvarNoticia(noticia,connection,function(error,result){        
+            res.redirect('/noticias');
+          });
     });
 }

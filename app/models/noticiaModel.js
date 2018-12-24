@@ -4,6 +4,9 @@ module.exports = function(){
     }
     this.getNoticia = function(connection,callback){
         connection.query('SELECT n.* FROM noticia as n where n.id_noticia = 2',callback); 
-       }
+    }
+    this.salvarNoticia = function(noticia,connection,callback){
+        connection.query('INSERT INTO noticia set ? ',noticia,callback); 
+    }
     return this;
 }

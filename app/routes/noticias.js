@@ -4,7 +4,7 @@ module.exports = function (app){
     var noticiaModel = app.app.models.noticiaModel;
     noticiaModel.getNoticias(connection,function(error,result){        
         res.render("noticias/noticias",{noticias:result});
-      })
+      });
            
   });
 }
