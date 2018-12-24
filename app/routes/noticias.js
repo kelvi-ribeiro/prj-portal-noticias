@@ -9,9 +9,8 @@ module.exports = function (app){
         password:'262517kaka',
         database:'portal_noticias'
     });
-    connection.query('SELECT * FROM noticia',function(error,result){
-        res.send(result);
-    });
-        //res.render("noticias/noticias");
-    });
+    connection.query('SELECT * FROM noticia',function(error,result){        
+        res.render("noticias/noticias",{noticias:result});
+       });        
+   });
 }
