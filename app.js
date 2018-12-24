@@ -1,16 +1,11 @@
-var app = require('./config/server')
+var app = require('./config/server');
 
-app.get('/',function(req,res){
-    res.render("home/index");
-});
+require('./app/routes/noticias')(app);
 
-app.get('/formulario-inclusao-noticia',function(req,res){
-    res.render("admin/form_add_noticia");
-});
-
-app.get('/noticias',function(req,res){
-    res.render("noticias/noticias");
-});
+require('./app/routes/home')(app);
+//Podem ser feito o require de uma função do jeito de cima e de baixo
+var rotaFormularioNoticia = require('./app/routes/formulario-inlusao-noticia');
+rotaFormularioNoticia(app);
 
 app.listen(3000,function(){
     console.log('Servidor Rodando Com Express');    
