@@ -1,6 +1,5 @@
 var mysql = require('mysql');
-var connMySQL = function(){        
-        console.log('Conexão com o banco estabelecida')
+var connMySQL = function(){                
         return mysql.createConnection({        
            host:'localhost',
            user:'root',
