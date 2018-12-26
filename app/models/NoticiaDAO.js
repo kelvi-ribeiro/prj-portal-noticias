@@ -5,8 +5,9 @@
     this._connection.query('SELECT n.* FROM noticia AS n ORDER BY n.data_criacao DESC',callback); 
  }
 
- NoticiaDAO.prototype.getNoticia = function(callback){
-    this._connection.query('SELECT n.* FROM noticia AS n where n.id_noticia = 1',callback);  
+ NoticiaDAO.prototype.getNoticia = function(id_noticia,callback){    
+    /* this._connection.query('SELECT n.* FROM noticia AS n where n.id_noticia = ?',id_noticia,callback);   */
+    this._connection.query('SELECT n.* FROM noticia AS n where n.id_noticia = ' + id_noticia,callback);
  }
 
  NoticiaDAO.prototype.salvarNoticia = function(noticia,callback){
