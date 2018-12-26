@@ -14,3 +14,9 @@ Tela de listagem de notícias:
 Tela de notícia específica:
 
 ![](https://i.imgur.com/WgrVopZ.png)
+
+Tela de com o formulário de inclusão de nova notícia:
+
+![](https://i.imgur.com/EKGcxJV.png)
+
+
