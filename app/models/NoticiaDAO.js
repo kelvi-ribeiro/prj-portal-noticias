@@ -12,6 +12,10 @@
  NoticiaDAO.prototype.salvarNoticia = function(noticia,callback){
     this._connection.query('INSERT INTO noticia set ? ',noticia,callback); 
  }
+ NoticiaDAO.prototype.getCincoUltimasNoticias = function(callback){
+   this._connection.query('SELECT * FROM noticia ORDER BY data_criacao DESC LIMIT 5',callback); 
+}
+ 
  module.exports = function(){
      return NoticiaDAO;
  }
